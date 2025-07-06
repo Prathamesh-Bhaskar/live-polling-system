@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "start": "nodemon src/server.js",
-    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "dev": "node src/server.js",
     "postinstall": "patch-package"
   },
   "dependencies": {
