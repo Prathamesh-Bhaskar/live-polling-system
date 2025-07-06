@@ -1,0 +1,39 @@
+.timer {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 12px;
+    border-radius: var(--border-radius);
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+  }
+  
+  .icon {
+    font-size: 16px;
+  }
+  
+  .time {
+    font-family: monospace;
+  }
+  
+  .normal {
+    background-color: #f0f9f0;
+    color: var(--success-color);
+  }
+  
+  .warning {
+    background-color: #fef3e0;
+    color: var(--warning-color);
+  }
+  
+  .critical {
+    background-color: #fee;
+    color: var(--error-color);
+    animation: pulse 1s infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+  }

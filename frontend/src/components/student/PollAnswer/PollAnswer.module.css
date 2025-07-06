@@ -1,0 +1,152 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    padding: 20px;
+  }
+  
+  .pollCard {
+    background: var(--background);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-lg);
+    padding: 32px;
+   
+    width: 600px;
+    border: 1px solid var(--border-color);
+  }
+  
+  .pollHeader {
+    margin-bottom: 32px;
+  }
+  
+  .questionInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .questionLabel {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-secondary);
+  }
+  
+  .question {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-white);
+    background-color: #374151;
+    padding: 16px;
+    border-radius: var(--border-radius);
+    margin: 0;
+  }
+  
+  .options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+  
+  .option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background-color: var(--background);
+  }
+  
+  .option:hover {
+    border-color: var(--primary-color);
+    background-color: #f8faff;
+  }
+  
+  .option.selected {
+    border-color: var(--primary-color);
+    background-color: #f8faff;
+  }
+  
+  .optionCircle {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+  }
+  
+  .option.selected .optionCircle {
+    border-color: var(--primary-color);
+  }
+  
+  .optionSelected {
+    width: 10px;
+    height: 10px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+  }
+  
+  .optionText {
+    font-size: 16px;
+    color: var(--text-primary);
+    font-weight: 500;
+  }
+  
+  .submitBtn {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: var(--text-white);
+    padding: 16px 24px;
+    border-radius: var(--border-radius-lg);
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .submitBtn:hover:not(.disabled) {
+    background-color: var(--primary-hover);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .submitBtn.disabled {
+    background-color: var(--border-color);
+    color: var(--text-secondary);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+  
+  @media (max-width: 768px) {
+    .pollCard {
+      padding: 24px 20px;
+    }
+    
+    .question {
+      font-size: 16px;
+      padding: 12px;
+    }
+    
+    .option {
+      padding: 12px;
+    }
+    
+    .optionText {
+      font-size: 14px;
+    }
+    
+    .submitBtn {
+      padding: 14px 20px;
+      font-size: 14px;
+    }
+  }

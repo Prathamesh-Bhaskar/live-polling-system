@@ -1,0 +1,46 @@
+.message {
+    padding: 12px;
+    border-radius: var(--border-radius);
+    max-width: 85%;
+    word-wrap: break-word;
+  }
+  
+  .message.teacher {
+    background-color: #f0f9f0;
+    border: 1px solid #d1fae5;
+    margin-left: auto;
+    align-self: flex-end;
+  }
+  
+  .message.student {
+    background-color: var(--background-secondary);
+    border: 1px solid var(--border-color);
+    margin-right: auto;
+    align-self: flex-start;
+  }
+  
+  .messageHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+    gap: 8px;
+  }
+  
+  .sender {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+  
+  .time {
+    font-size: 11px;
+    color: var(--text-secondary);
+    flex-shrink: 0;
+  }
+  
+  .messageText {
+    font-size: 14px;
+    color: var(--text-primary);
+    line-height: 1.4;
+  }
