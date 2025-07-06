@@ -6,7 +6,7 @@ const { connectRedis } = require('./config/redis');
 const { setupSocket } = require('./socket/socketManager');
 const logger = require('./utils/logger');
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT;
 
 async function startServer() {
   try {

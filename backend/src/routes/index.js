@@ -17,6 +17,14 @@ router.get('/health', (req, res) => {
 
 // API info endpoint - put this BEFORE mounting other routes
 router.get('/', (req, res) => {
+  // Dynamic WebSocket URL based on environment
+  const getWebSocketUrl = () => {
+    if (process.env.NODE_ENV === 'production') {
+      return 'wss://pollsystembackend.onrender.com';
+    }
+    return 'ws://localhost:3001';
+  };
+
   res.json({
     name: 'Live Polling System API',
     version: '1.0.0',
@@ -28,7 +36,7 @@ router.get('/', (req, res) => {
       health: '/api/health',
     },
     socketEvents: {
-      connection: 'ws://localhost:3001',
+      connection: getWebSocketUrl(),
       documentation: 'See README.md for Socket.io events',
     },
   });

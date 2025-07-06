@@ -16,7 +16,7 @@ app.use(helmet({
   contentSecurityPolicy: {
     directives: {
       defaultSrc: ["'self'"],
-      connectSrc: ["'self'", process.env.CLIENT_URL || "http://localhost:3000"],
+      connectSrc: ["'self'", process.env.CLIENT_URL],
     },
   },
 }));
