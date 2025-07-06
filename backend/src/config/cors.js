@@ -1,6 +1,6 @@
 const logger = require('../utils/logger');
 
-const allowedOrigins = (process.env.ALLOWED_ORIGINS)
+const allowedOrigins = (process.env.ALLOWED_ORIGINS || 'https://live-polling-system-lime.vercel.app')
   .split(',')
   .map(origin => origin.trim());
 
